@@ -53,12 +53,13 @@ import com.google.gwt.core.client.EntryPoint;
 import com.google.gwt.event.logical.shared.ResizeEvent;
 import com.google.gwt.event.logical.shared.ResizeHandler;
 import com.google.gwt.user.client.Window;
+import com.lushprojects.circuitjs1.client.element.CirSim;
 
 public class circuitjs1 implements EntryPoint {
 	
 	public static final String versionString="1.0.1";
 
-	static CirSim mysim;
+	public static CirSim mysim;
 	
   public void onModuleLoad() {
 	  mysim = new CirSim();
@@ -68,8 +69,8 @@ public class circuitjs1 implements EntryPoint {
 	    	 
             public void onResize(ResizeEvent event)
             {               
-            	mysim.setCanvasSize();
-                mysim.setiFrameHeight();	
+            	mysim.gui.setCanvasSize();
+                mysim.gui.setiFrameHeight();	
                 	
             }
         });
